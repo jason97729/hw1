@@ -2,6 +2,7 @@
     height: 300px;
     width: 200px;
     border: 3px solid black;
+    margin: 5px;
 
 }
 
@@ -15,17 +16,31 @@
     height: 300px;
     width: 300px;
     border: 3px solid black;
+    margin: 5px;
 }
 
-body {
+#body.color1 {
     color:white; 
     background-color: #0B6183;
     font-family: 'Sriracha', serif;
     text-align: center;
 }
 
-em {
+#body.color2{
+    color:white; 
+    background-color: #501B1D; 
+    font-family: 'Sriracha', serif;
+    text-align: center;
+
+}
+
+
+#em.yellow {
     color: yellow;
     font-size: 22pt;
 }
 
+#name.colorChange {
+    color: lightgreen;
+
+}
