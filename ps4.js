@@ -2,7 +2,7 @@
 // I was able to download the moment.js file into my local machine; then, I could implement the moment.format() function into my startTime() function. 
 // It helps me eliminate the extra code that I have.
 
-// I also implemented the Bootstrap CSS framework into the HTML to make my page look more excellent.
+// I also implemented the Bootstrap CSS framework into the HTML to make my page looks more excellent.
 const homeImages = ["Image/IMG_2512.jpg", "Image/IMG_7100.jpg"]
 let thumbnails = document.getElementById('thumbnails');
 let homeImagesLength = homeImages.length;
