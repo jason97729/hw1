@@ -1,18 +1,16 @@
+// I used the moment.js library to change the format of the time display. I used it to format my current time display.
+// I was able to download the moment.js file into my local machine; then, I could implement the moment.format() function into my startTime() function. 
+// It helps me eliminate the extra code that I have.
+
+// I also implemented the Bootstrap CSS framework into the HTML to make my page look more excellent.
 const homeImages = ["Image/IMG_2512.jpg", "Image/IMG_7100.jpg"]
-
 let thumbnails = document.getElementById('thumbnails');
-
 let homeImagesLength = homeImages.length;
 let homeImagesIndex = 0;
-
 const body = document.getElementById("body");
-
 const emphasize = document.getElementById("em");
-
 const timeButton = document.getElementById("current-time");
-
 const section = document.getElementById("section");
-
 const myName = document.getElementById("name");
 
 
@@ -37,7 +35,6 @@ setInterval(() => {
         thumbnails.append(imgElement);
         homeImagesIndex++;
         homeImagesLength-=1;
-        console.log(homeImagesLength);
     }
     
 
@@ -49,21 +46,12 @@ emphasize.addEventListener('mouseover', () => {
 })
 
 function startTime() {
-    var today = new Date();
-    var h = today.getHours();
-    var m = today.getMinutes();
-    var s = today.getSeconds();
-    m = checkTime(m);
-    s = checkTime(s);
+    const time = (new Date()).getTime();
+    const timeMoment = moment(time).format('MMMM Do YYYY, h:mm:ss a');
     const timeElement = document.createElement("h3");
-    timeElement.textContent = h + ":" + m + ":" + s;
+    timeElement.textContent = timeMoment
     section.append(timeElement);
   }
-
-function checkTime(i) {
-    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-    return i;
-}
 
 timeButton.addEventListener('click', startTime);
 
@@ -71,3 +59,4 @@ timeButton.addEventListener('click', startTime);
 myName.addEventListener('mouseover', () => {
     myName.setAttribute('class', 'colorChange');
 })
+
